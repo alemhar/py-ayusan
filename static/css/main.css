@@ -1,0 +1,73 @@
+
+#logo{
+}
+
+.page-color{
+    background-color: #dae0e5;
+}
+
+body{
+    background-color: #ebeff5;
+}
+
+
+#total-orders{
+    background-color: #4cb4c7;
+}
+
+
+#orders-delivered{
+    background-color: #7abecc;
+}
+
+#orders-pending{
+    background-color: #7CD1C0;
+}
+
+
+.btn-notification {
+    border-radius: 50%;
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+.btn-notification:hover {
+    color: #212529;
+    background-color: #dadadaef;
+    border-color: #dae0e5;
+}
+
+.btn-notification .badge {
+    position: absolute;
+    /* top: -10px; */
+    /* right: -10px; */
+    padding: 5px 5px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 8pt;
+  }
+
+.btn-notification .far {
+    font-size: 13pt;
+}
+
+#search-btn{
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.latest-label{
+    margin: auto;
+    font-weight: 600; 
+    margin-top: 5px;
+    font-size: 14pt;
+}
+
+.ageefy{
+    font-weight: 600;
+    font-size: 18pt;
+    color: darkgray;
+}

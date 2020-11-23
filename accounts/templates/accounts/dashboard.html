@@ -1,0 +1,91 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+
+{#  include 'accounts/status.html' #}
+
+<br>
+
+<div class="row">
+
+	<div class="col-md-6">
+		<h5 class="mb-0">LOOKING FOR...</h5>
+		<a href=""><span>browse all</span></a>
+		<div class="card card-body">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search ">
+				<div class="input-group-append">
+					<button class="btn btn-success mr-3" type="button" id="search-btn">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+			</div>
+			<p class="latest-label">Latest Job Orders</p>	
+			<table class="table table-sm">
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Category</th>
+					
+				</tr>
+				<tr>
+					<td>Juan dela Cruz</td>
+					<td>Shoe Repair</td>
+					<td>Shoe Repair</td>
+				</tr>
+				<tr>
+					<td>Pedro Penduko</td>
+					<td>Kitchen Renovation</td>
+					<td>Construction</td>
+				</tr>
+				<tr>
+					<td>Kulas Bayani</td>
+					<td>Patalon Repair</td>
+					<td>Tayloring</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-6 mt-3 mt-md-0">
+		<h5 class="mb-0">CONTRACTOR/FREELANCER</h5>
+		<a href=""><span>browse all</span></a>
+		<div class="card card-body">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search ">
+				<div class="input-group-append">
+					<button class="btn btn-success mr-3" type="button" id="search-btn">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+			</div>
+			<p class="latest-label">Latest Added</p>	
+			<table class="table table-sm">
+				<tr>
+					<th>Name</th>
+					<th>Category</th>
+					<th>Rating</th>
+				</tr>
+				<tr>
+					<td>ABC Construction</td>
+					<td>Construction</td>
+					<td>4/5</td>
+				</tr>
+				<tr>
+					<td>XYZ Enterprise</td>
+					<td>RTW Whole Sale</td>
+					<td>3/5</td>
+				</tr>
+				<tr>
+					<td>A2Z Automotive</td>
+					<td>Automotive</td>
+					<td>5/5</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	
+
+</div>
+{% endblock %}

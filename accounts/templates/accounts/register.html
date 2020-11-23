@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+        <script src="https://kit.fontawesome.com/ddbedb996e.js" crossorigin="anonymous"></script>
+        <title>Pageefy</title>
+    </head>
+    <body>
+        
+        <div class="container mt-5">
+			
+			<div class="page-color col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 pl-4 pr-4 pt-4 pb-4" style="margin: auto; border-radius: 10px;">
+				
+				<form role="form" action="/register" method="POST">
+					{% csrf_token %}
+					<img src="{% static 'images/pageefy-green.png' %}" style="width: 30px;margin-top: -22px;">
+					<span style="font-size: 24pt;">lease Sign Up, <small style="font-size: 16pt;">It's free.</small></span>
+					
+					<hr class="colorgraph">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<input type="text" name="fname" id="fname" class="form-control input-lg" placeholder="First Name" tabindex="1">
+							</div>	
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<input type="text" name="lname" id="lname" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+							</div>
+						</div>
+					</div>
+					<!-- div class="form-group">
+						<input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+					</div -->
+					<div class="form-group">
+						<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+							</div>
+						</div>
+					</div>
+				
+					<!-- div class="row">
+						<div class="col-xs-4 col-sm-3 col-md-3">
+							<span class="button-checkbox">
+								<button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
+								<input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+							</span>
+						</div>
+						<div class="col-xs-8 col-sm-9 col-md-9">
+							 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+						</div>
+					</div -->
+					
+					<hr class="colorgraph">
+					<div class="row">
+						<div class="col-xs-12 col-md-6 mt-2"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+						<div class="col-xs-12 col-md-6 mt-2"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+					</div>
+				</form>
+			</div>
+        </div>
+        {% include 'main/footer.html' %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
