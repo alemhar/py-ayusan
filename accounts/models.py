@@ -22,6 +22,7 @@ class UserManager(BaseUserManager):
         user_object.active = is_active
         user_object.fname = fname
         user_object.lname = lname
+        user_object.type = type
         
         user_object.save(using=self._db)
 

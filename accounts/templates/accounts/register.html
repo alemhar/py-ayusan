@@ -67,14 +67,33 @@
 							 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
 						</div>
 					</div -->
-					
+					<div>
+						<div><small style="font-size: 12pt;">Account Type:</small></div> 
+						<div class="">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="user_type" id="inlineRadio1" value="REGULAR" checked>
+								<label class="form-check-label" for="inlineRadio1">Regular User</label>
+							  </div>
+							  <div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="user_type" id="inlineRadio2" value="CONTRACTOR">
+								<label class="form-check-label" for="inlineRadio2">Contractor/Freelancer</label>
+							</div>
+						</div>
+					</div>
+					<div>
+						{% for message in messages %}
+							<p class="text-danger"> *** {{message}} ***</p>
+						{% endfor %}
+					</div>
 					<hr class="colorgraph">
 					<div class="row">
 						<div class="col-xs-12 col-md-6 mt-2"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
 						<div class="col-xs-12 col-md-6 mt-2"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
 					</div>
 				</form>
+
 			</div>
+			
         </div>
         {% include 'main/footer.html' %}
 
