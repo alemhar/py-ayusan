@@ -19,7 +19,8 @@
 			
 			<div class="page-color col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 pl-4 pr-4 pt-4 pb-4" style="margin: auto; border-radius: 10px;">
 				
-				<form role="form">
+				<form action="login" method="POST" role="form">
+                    {% csrf_token %}
 					<img src="{% static 'images/pageefy-green.png' %}" style="width: 30px;margin-top: -22px;">
 					<span style="font-size: 24pt;">lease Login</span>
 					
@@ -41,11 +42,15 @@
 							 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
 						</div>
 					</div -->
-					
+					<div>
+						{% for message in messages %}
+							<p class="text-danger"> *** {{message}} ***</p>
+						{% endfor %}
+					</div>
 					<hr class="colorgraph">
 					<div class="row">
                         <div class="col-xs-12 col-md-6 mt-2 justify-center" style="margin: auto;">
-                            <a href="#" class="btn btn-success btn-block btn-lg">Sign In</a>
+                            <input  type="submit" class="btn btn-success btn-block btn-lg" value="Sign In">
                             
                         </div>
                     </div>

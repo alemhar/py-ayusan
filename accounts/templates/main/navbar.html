@@ -1,19 +1,13 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="justify-content: space-between;">
-    <div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+    <div style="margin-bottom: 15px;">
       <img src="{% static 'images/pageefy-green.png' %}" style="width: 30px;">
       <span class="ageefy">ageefy</span>
-        
-
     </div>
-    
-
-    
-    
-
     <div id="navbarNav">
       <div class="input-group">
+        {% if user.is_authenticated %}
         <!-- input type="text" class="form-control" placeholder="Search ">
         <div class="input-group-append">
             <button class="btn btn-secondary mr-3" type="button" id="search-btn">
@@ -31,25 +25,47 @@
         <button type="button" class="btn btn-notification mr-2">
           <i class="fas fa-home"></i>
         </button>
-        <button type="button" class="btn btn-notification mr-2">
+        <button type="button" class="btn btn-notification mr-4">
           <i class="fas fa-bell"></i>
           <span class="badge">23</span>
         </button>
-        <button type="button" class="btn btn-notification mr-2">
+        <!-- button type="button" class="btn btn-notification mr-2">
           <i class="fas fa-caret-down"></i>
+        </button -->
+        <button type="button" class="btn btn-notification mr-2">
+          <a href="logout" style="text-decoration: none;color: inherit;">
+            <i class="fas fa-times-circle"></i>
+          </a>
         </button>
+        {% endif %}
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav" -->
+
+        <div class="" id="">
+
           <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+            
+            <!-- li class="nav-item ml-2" style="margin-top: 5px;">
+              <p style="display: inline;" class="nav-link mr-2" ><b>Hello {{ user.fname }}!</b></p>
+              <a style="display: inline;" class="nav-link" href="logout">Logout <span class="sr-only">(current)</span></a>
+            </li -->
+            {% else %}
+            
             <li class="nav-item">
-              <a class="nav-link" href="#">Login <!-- span class="sr-only">(current)</span --></a>
+              <span><a style="display: inline;" class="nav-link mr-3" href="login">Login</a></span>
+              <span><a style="display: inline;" class="nav-link" href="register">Sign Up</a></span>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register">Sign Up</a>
-            </li>
+            <!-- li class="nav-item">
+              
+              
+            </li -->
+            {% endif %}
+            
+            
           </ul>
         </div>
     </div>

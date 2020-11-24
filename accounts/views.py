@@ -20,9 +20,26 @@ def regular(request):
 def company(request):
     return render(request,'accounts/company.html')
 
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
 
 def login(request):
-    return render(request,'accounts/login.html')
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+
+        user = auth.authenticate(email=email, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request, 'Access denied.')
+            return redirect('login')                
+
+    else:
+        return render(request,'accounts/login.html')
 
 
 def register(request):
@@ -49,7 +66,6 @@ def register(request):
         )
         
         user.save()
-        print(user_type)
-        return redirect('/')
+        return redirect('login')
     else:
         return render(request,'accounts/register.html')        
